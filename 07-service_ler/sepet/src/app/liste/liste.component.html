@@ -1,5 +1,8 @@
-<div *ngFor="let urun of data" appImage [urun]="urun">
+<div *ngFor="let urun of data" appImage [urun]="urun" #image="image">
+  <img [src]="urun.image">
+  {{ ( image.img | async )?.width }}
+  {{ ( image.img | async )?.height }}
   {{urun.name}}
   {{urun.price}}
-  <button (click)="sepeteEkle(urun)">Sepete Ekle</button>
+  <button (click)="sepeteEkle(urun, image)">Sepete Ekle</button>
 </div>

@@ -1,27 +1,56 @@
-import { Directive, OnInit } from '@angular/core';
-import { Input } from '@angular/core/src/metadata/directives';
+import { Directive, OnInit, HostListener } from '@angular/core';
 import { IUrun } from './liste.service';
+import { Subject } from 'rxjs/Subject';
+import { ImageServiceService } from './image-service.service';
 
 @Directive({
   selector: '[appImage]',
-  inputs: ['urun']
+  inputs: ['urun'],
+  exportAs: "image"
 })
 export class ImageDirective implements OnInit {
   private urun: IUrun;
-  private sizes = {width: 0, height: 0};
+  private img = new Subject<HTMLImageElement>();
 
-  constructor() {
+  constructor(
+    public imageService: ImageServiceService
+  ) {
     console.log('directive');
   }
 
+  @HostListener("click")
+  onMouseEnter() {
+    this.imageService.changeUrl(this.urun.image);
+  }
+
   ngOnInit() {
-    const prom = new Promise(function(resolve, reject) {
+    new Promise<HTMLImageElement>((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F117.png?alt=media&token=60559739-4dc3-41a7-aea8-b1df1985f329');
+      xhr.open('GET', this.urun.image);
       xhr.responseType = 'blob';
-      xhr.onload = resolve;
+
+      xhr.onload = () => {
+        resolve(xhr.response);
+      };
+
       xhr.onerror = reject;
       xhr.send();
+    })
+    .then(blob => {
+      return URL.createObjectURL(blob);
+    })
+    .then(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      return img;
+    })
+    .then(img => {
+      return new Promise<HTMLImageElement>(resolve => {
+        setTimeout(() => {resolve(img)},  1000);
+      });
+    })
+    .then(img => {
+      this.img.next(img);
     });
   }
 }

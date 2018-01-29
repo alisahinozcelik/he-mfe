@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ListeService } from './liste.service';
 import { SepetService } from './sepet.service';
 import { ImageDirective } from './image.directive';
+import { VitrinComponent } from './vitrin/vitrin.component';
+import { ImageServiceService } from './image-service.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,16 @@ import { ImageDirective } from './image.directive';
     SepetComponent,
     ListeComponent,
     HeaderComponent,
-    ImageDirective
+    ImageDirective,
+    VitrinComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
     ListeService,
-    SepetService
+    SepetService,
+    ImageServiceService
   ],
   bootstrap: [AppComponent]
 })
