@@ -7,6 +7,7 @@ export interface IUrun {
   id: string;
   name: string;
   price: number;
+  image: string;
 }
 
 @Injectable()

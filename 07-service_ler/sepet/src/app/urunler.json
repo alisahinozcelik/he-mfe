@@ -3,60 +3,60 @@
     "id": "5a6f1aa3ea02dc71de492ebd",
     "name": "quis minim",
     "price": 119,
-    "image": "https://loremflickr.com/384/141/0"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F1.png?alt=media&token=878984fa-fead-43a9-9946-fd7b75f9ec1e"
   },
   {
     "id": "5a6f1aa3b7eca77a69f809f0",
     "name": "dolore irure",
     "price": 63,
-    "image": "https://loremflickr.com/276/81/1"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F10.png?alt=media&token=d1776925-63fc-4722-81c7-3f13fb2c3d48"
   },
   {
     "id": "5a6f1aa3a105c8e363e232fb",
     "name": "id veniam",
     "price": 57,
-    "image": "https://loremflickr.com/154/106/2"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F100.png?alt=media&token=b2e91ed9-3f54-40b3-8699-941691f4f752"
   },
   {
     "id": "5a6f1aa36747d870c61a3ae8",
     "name": "nostrud laboris",
     "price": 145,
-    "image": "https://loremflickr.com/220/233/3"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F104.png?alt=media&token=7852bc86-2012-48c6-ba1f-f0ed34ea204c"
   },
   {
     "id": "5a6f1aa3cf1570dc561e0966",
     "name": "ipsum enim",
     "price": 83,
-    "image": "https://loremflickr.com/91/84/4"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F108.png?alt=media&token=3f2a905a-7714-4ddd-90f7-e8fd505331f3"
   },
   {
     "id": "5a6f1aa32ea875afb5a8113c",
     "name": "eiusmod dolor",
     "price": 137,
-    "image": "https://loremflickr.com/276/245/5"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F117.png?alt=media&token=60559739-4dc3-41a7-aea8-b1df1985f329"
   },
   {
     "id": "5a6f1aa36e9daeccbdc46ab9",
     "name": "enim excepteur",
     "price": 56,
-    "image": "https://loremflickr.com/83/128/6"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F117.png?alt=media&token=60559739-4dc3-41a7-aea8-b1df1985f329"
   },
   {
     "id": "5a6f1aa3ebc8a3a6d6c5e024",
     "name": "consequat adipisicing",
     "price": 58,
-    "image": "https://loremflickr.com/394/151/7"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F117.png?alt=media&token=60559739-4dc3-41a7-aea8-b1df1985f329"
   },
   {
     "id": "5a6f1aa36cc3b78fbf5e0cca",
     "name": "ex ipsum",
     "price": 125,
-    "image": "https://loremflickr.com/294/89/8"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F117.png?alt=media&token=60559739-4dc3-41a7-aea8-b1df1985f329"
   },
   {
     "id": "5a6f1aa3f0b04016abc5ba10",
     "name": "reprehenderit consequat",
     "price": 126,
-    "image": "https://loremflickr.com/102/81/9"
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokedex-c0501.appspot.com/o/images%2Fsprites%2Fdefault%2F117.png?alt=media&token=60559739-4dc3-41a7-aea8-b1df1985f329"
   }
 ]

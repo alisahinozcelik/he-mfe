@@ -7,13 +7,15 @@ import { ListeComponent } from './liste/liste.component';
 import { HeaderComponent } from './header/header.component';
 import { ListeService } from './liste.service';
 import { SepetService } from './sepet.service';
+import { ImageDirective } from './image.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SepetComponent,
     ListeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ImageDirective
   ],
   imports: [
     BrowserModule

@@ -1,4 +1,4 @@
-<div *ngFor="let urun of data">
+<div *ngFor="let urun of data" appImage [urun]="urun">
   {{urun.name}}
   {{urun.price}}
   <button (click)="sepeteEkle(urun)">Sepete Ekle</button>
