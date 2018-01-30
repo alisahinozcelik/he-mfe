@@ -2,11 +2,16 @@
 <div *ngIf="!(data | filterListe: input).length">
   Sonuç Bulunamadı
 </div>
-<div *ngFor="let urun of data | filterListe: input" appImage [urun]="urun" #image="image">
+<div *ngFor="let urun of data | filterListe: input"
+  appImage
+  [urun]="urun"
+  #image="image"
+  >
   <img [src]="urun.image">
   {{ ( image.img | async )?.width }}
   {{ ( image.img | async )?.height }}
   {{urun.name}}
   {{urun.price}}
   <button (click)="sepeteEkle(urun, image)">Sepete Ekle</button>
+  <button [routerLink]="'/urun/' + urun.id">Detaylar</button>
 </div>

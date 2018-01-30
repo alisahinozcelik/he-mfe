@@ -18,7 +18,7 @@ export class ImageDirective implements OnInit {
     console.log('directive');
   }
 
-  @HostListener("click")
+  @HostListener("mouseenter")
   onMouseEnter() {
     this.imageService.changeUrl(this.urun.image);
   }

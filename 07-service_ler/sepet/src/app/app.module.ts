@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Route } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SepetComponent } from './sepet/sepet.component';
@@ -13,6 +14,32 @@ import { VitrinComponent } from './vitrin/vitrin.component';
 import { ImageServiceService } from './image-service.service';
 import { FilterListePipe } from './filter-liste.pipe';
 import { ShowSepetPipe } from './show-sepet.pipe';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { UrunDetayComponent } from './urun-detay/urun-detay.component';
+
+const ROUTES: Route[] = [
+  {
+    path: "",
+    redirectTo: "home",
+    pathMatch: "full"
+  },
+  {
+    path: "home",
+    component: HomeComponent,
+    data: {title: "Anasayfa", changeTitleAtRoot: true}
+  },
+  {
+    path: "about",
+    component: AboutComponent,
+    data: {title: "Hakkımızda", changeTitleAtRoot: true}
+  },
+  {
+    path: "urun/:id",
+    component: UrunDetayComponent,
+    data: {title: "Ürün", changeTitleAtRoot: false}
+  }
+];
 
 @NgModule({
   declarations: [
@@ -23,11 +50,15 @@ import { ShowSepetPipe } from './show-sepet.pipe';
     ImageDirective,
     VitrinComponent,
     FilterListePipe,
-    ShowSepetPipe
+    ShowSepetPipe,
+    HomeComponent,
+    AboutComponent,
+    UrunDetayComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [
     ListeService,
