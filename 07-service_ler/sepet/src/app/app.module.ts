@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SepetComponent } from './sepet/sepet.component';
@@ -10,6 +11,8 @@ import { SepetService } from './sepet.service';
 import { ImageDirective } from './image.directive';
 import { VitrinComponent } from './vitrin/vitrin.component';
 import { ImageServiceService } from './image-service.service';
+import { FilterListePipe } from './filter-liste.pipe';
+import { ShowSepetPipe } from './show-sepet.pipe';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,13 @@ import { ImageServiceService } from './image-service.service';
     ListeComponent,
     HeaderComponent,
     ImageDirective,
-    VitrinComponent
+    VitrinComponent,
+    FilterListePipe,
+    ShowSepetPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     ListeService,

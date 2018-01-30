@@ -23,5 +23,4 @@ export class ListeComponent implements OnInit {
   public sepeteEkle(urun: IUrun): void {
     this.sepetService.urunEkle(urun);
   }
-
 }

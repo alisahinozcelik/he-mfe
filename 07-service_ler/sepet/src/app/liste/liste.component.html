@@ -1,4 +1,8 @@
-<div *ngFor="let urun of data" appImage [urun]="urun" #image="image">
+<input [(ngModel)]="input" />
+<div *ngIf="!(data | filterListe: input).length">
+  Sonuç Bulunamadı
+</div>
+<div *ngFor="let urun of data | filterListe: input" appImage [urun]="urun" #image="image">
   <img [src]="urun.image">
   {{ ( image.img | async )?.width }}
   {{ ( image.img | async )?.height }}

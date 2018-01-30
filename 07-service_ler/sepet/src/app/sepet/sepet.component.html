@@ -1,3 +1,6 @@
+<div *ngFor="let urun of data | async | showSepet">
+  Urun Adı: {{urun.name}} Adet: <b>{{urun.count}}</b>
+</div>
 <div>sepetteki ürünler {{ (data | async).size }}</div>
 <div>total: {{total}}</div>
 <app-vitrin></app-vitrin>
