@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import "rxjs/add/operator/first";
 import { ListeService, IUrun } from '../liste.service';
-import { SepetService } from '../sepet.service';
+import { SepetService } from "../sepet.service";
 
 @Component({
   selector: 'app-urun-detay',
@@ -18,7 +18,9 @@ export class UrunDetayComponent implements OnInit {
     public list: ListeService,
     public router: Router,
     public sepet: SepetService
-  ) { }
+  ) {
+    // console.log(router);
+  }
 
   ngOnInit() {
     this.route
@@ -27,7 +29,9 @@ export class UrunDetayComponent implements OnInit {
       .toPromise()
       .then(map => map.get("id"))
       .then(id => this.list.liste.find(item => item.id === id))
-      .then(data => this.data = data);
+      .then(data => this.data = data)
+      .then(data => document.title = data.name)
+      .then(data => console.log(this.data));
   }
 
   sepeteEkle() {

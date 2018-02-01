@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Route } from '@angular/router';
+import { RouterModule, Route, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SepetComponent } from './sepet/sepet.component';
@@ -17,6 +17,7 @@ import { ShowSepetPipe } from './show-sepet.pipe';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UrunDetayComponent } from './urun-detay/urun-detay.component';
+import { BosSepetGuard } from './bos-sepet.guard';
 
 const ROUTES: Route[] = [
   {
@@ -37,7 +38,8 @@ const ROUTES: Route[] = [
   {
     path: "urun/:id",
     component: UrunDetayComponent,
-    data: {title: "Ürün", changeTitleAtRoot: false}
+    data: {title: "Ürün", changeTitleAtRoot: false},
+    canActivate: [BosSepetGuard]
   }
 ];
 
@@ -63,7 +65,8 @@ const ROUTES: Route[] = [
   providers: [
     ListeService,
     SepetService,
-    ImageServiceService
+    ImageServiceService,
+    BosSepetGuard
   ],
   bootstrap: [AppComponent]
 })
