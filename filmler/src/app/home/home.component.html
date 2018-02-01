@@ -1,0 +1,5 @@
+<h1>Popüler Filmler</h1>
+<div *ngFor="let film of filmler | maxLength: 5">
+  <app-film-item [film]="film"></app-film-item>
+</div>
+
